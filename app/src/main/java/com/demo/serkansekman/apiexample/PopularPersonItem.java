@@ -1,20 +1,21 @@
 package com.demo.serkansekman.apiexample;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by serkan.sekman on 9/13/2016.
  */
 public class PopularPersonItem {
     private String name;
     private String profile_path;
-  //  private int poster_path;
 
-
+    private List<MovieDetail> movies = new ArrayList<>();
 
     public PopularPersonItem(String name, String profile_path) {
         super();
         this.name = name;
         this.profile_path = profile_path;
-       // this.poster_path = poster_path;
     }
 
     public String getName() {
@@ -33,7 +34,15 @@ public class PopularPersonItem {
         this.profile_path = profile_path;
     }
 
-  /*  public int getPoster_path() {
+    public List<MovieDetail> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(List<MovieDetail> movies) {
+        this.movies = movies;
+    }
+
+    /*  public int getPoster_path() {
         return poster_path;
     }
 
